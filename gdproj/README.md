@@ -11,7 +11,7 @@ Related issue on Godot repo: https://github.com/godotengine/godot/issues/6915
 
 ## Usage
 
-1. Download the binary (or compile yourself using pyinstaller module).
+1. [Download](https://github.com/williamd1k0/godot-sandbox/releases/tag/gdproj.1) the binary (or compile yourself using pyinstaller module).
 2. Extract files in a safe folder.
 3. Open `.gdpath` file and set `default` key to actual godot path (this file is a simple yaml file).
 4. Create an empty `.gdproj` file in the root of your project (eg: `myawesomegame.gdproj`)
