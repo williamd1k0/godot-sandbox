@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/20110701" xmlns:xmi="http://www.omg.org/spec/XMI/20110701">
+  <uml:Model name="godot" xmi:id="_5vxkoZLnEea0KJAXRC16pg">
+    <packagedElement name="godot" xmi:id="_5v0A4JLnEea0KJAXRC16pg" xmi:type="uml:Package">
+      <packagedElement name="Core" xmi:id="_5v0A4ZLnEea0KJAXRC16pg" xmi:type="uml:Package">
+        <packagedElement name="Object" xmi:id="_5v0A4pLnEea0KJAXRC16pg" xmi:type="uml:Class"/>
+        <packagedElement name="Node" xmi:id="_5v0A45LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A4pLnEea0KJAXRC16pg" xmi:id="_5v0A5JLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Node2D" xmi:id="_5v0A5ZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A7ZLnEea0KJAXRC16pg" xmi:id="_5v0A5pLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Control" xmi:id="_5v0A55LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A7ZLnEea0KJAXRC16pg" xmi:id="_5v0A6JLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Label" xmi:id="_5v0A6ZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A55LnEea0KJAXRC16pg" xmi:id="_5v0A6pLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="AnimationPlayer" xmi:id="_5v0A65LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A45LnEea0KJAXRC16pg" xmi:id="_5v0A7JLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="CanvasItem" xmi:id="_5v0A7ZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A45LnEea0KJAXRC16pg" xmi:id="_5v0A7pLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Sprite" xmi:id="_5v0A75LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0A8JLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="OS" xmi:id="_5v0A8ZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A4pLnEea0KJAXRC16pg" xmi:id="_5v0A8pLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Reference" xmi:id="_5v0A85LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A4pLnEea0KJAXRC16pg" xmi:id="_5v0A9JLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Resource" xmi:id="_5v0A9ZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A85LnEea0KJAXRC16pg" xmi:id="_5v0A9pLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Texture" xmi:id="_5v0A95LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A9ZLnEea0KJAXRC16pg" xmi:id="_5v0A-JLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Animation" xmi:id="_5v0A-ZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A9ZLnEea0KJAXRC16pg" xmi:id="_5v0A-pLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Button" xmi:id="_5v0A-5LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A_5LnEea0KJAXRC16pg" xmi:id="_5v0A_JLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="TextureButton" xmi:id="_5v0A_ZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A_5LnEea0KJAXRC16pg" xmi:id="_5v0A_pLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="BaseButton" xmi:id="_5v0A_5LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A55LnEea0KJAXRC16pg" xmi:id="_5v0BAJLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="CanvasModulate" xmi:id="_5v0BAZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0n8JLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="TiledMap" xmi:id="_5v0n8ZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0n8pLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Particles2D" xmi:id="_5v0n85LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0n9JLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="ParticleAttractor2D" xmi:id="_5v0n9ZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0n9pLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="ViewportSprite" xmi:id="_5v0n95LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0n-JLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="AnimatedSprite" xmi:id="_5v0n-ZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0n-pLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Position2D" xmi:id="_5v0n-5LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0n_JLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="CollisionObject2D" xmi:id="_5v0n_ZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0n_pLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="PhysicsBody2D" xmi:id="_5v0n_5LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0n_ZLnEea0KJAXRC16pg" xmi:id="_5v0oAJLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="StaticBody2D" xmi:id="_5v0oAZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0n_5LnEea0KJAXRC16pg" xmi:id="_5v0oApLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="RigidBody2D" xmi:id="_5v0oA5LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0n_5LnEea0KJAXRC16pg" xmi:id="_5v0oBJLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="KinematicBody2D" xmi:id="_5v0oBZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0n_5LnEea0KJAXRC16pg" xmi:id="_5v0oBpLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Area2D" xmi:id="_5v0oB5LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0n_ZLnEea0KJAXRC16pg" xmi:id="_5v0oCJLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="CollisionShape2D" xmi:id="_5v0oCZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0oCpLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="CollisionPolygon2D" xmi:id="_5v0oC5LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0oDJLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="RayCast2D" xmi:id="_5v0oDZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0oDpLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="VisibilityNotifier2D" xmi:id="_5v0oD5LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0oEJLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="VisibilityEnabler2D" xmi:id="_5v0oEZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0oD5LnEea0KJAXRC16pg" xmi:id="_5v0oEpLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Polygon2D" xmi:id="_5v0oE5LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0oFJLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Light2D" xmi:id="_5v0oFZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0oFpLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Ysort" xmi:id="_5v0oF5LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0oGJLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="LightOccluder2D" xmi:id="_5v0oGZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0oGpLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Camera2D" xmi:id="_5v0oG5LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0oHJLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="BackBufferCopy" xmi:id="_5v0oHZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0oHpLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Joint2D" xmi:id="_5v0oH5LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0oIJLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="GrooveJoint2D" xmi:id="_5v0oIZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0oH5LnEea0KJAXRC16pg" xmi:id="_5v0oIpLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="PinJoint2D" xmi:id="_5v0oI5LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0oH5LnEea0KJAXRC16pg" xmi:id="_5v0oJJLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="DampedSpringJoint2D" xmi:id="_5v0oJZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0oH5LnEea0KJAXRC16pg" xmi:id="_5v0oJpLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="ParallaxLayer" xmi:id="_5v0oJ5LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0oKJLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="SoundPlayer2D" xmi:id="_5v0oKZLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v0oKpLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="SamplePlayer2D" xmi:id="_5v0oK5LnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0oKZLnEea0KJAXRC16pg" xmi:id="_5v0oLJLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="TouchScreenButton" xmi:id="_5v1PAJLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v1PAZLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="RemoteTransform2D" xmi:id="_5v1PApLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v1PA5LnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="PathFollow2D" xmi:id="_5v1PBJLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v1PBZLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Navigation2D" xmi:id="_5v1PBpLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v1PB5LnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Path2D" xmi:id="_5v1PCJLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v1PCZLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="NavigationPolygonInstance" xmi:id="_5v1PCpLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A5ZLnEea0KJAXRC16pg" xmi:id="_5v1PC5LnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Viewport" xmi:id="_5v1PDJLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A45LnEea0KJAXRC16pg" xmi:id="_5v1PDZLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Spatial" xmi:id="_5v1PDpLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A45LnEea0KJAXRC16pg" xmi:id="_5v1PD5LnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="HTTPRequest" xmi:id="_5v1PEJLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A45LnEea0KJAXRC16pg" xmi:id="_5v1PEZLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Timer" xmi:id="_5v1PEpLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A45LnEea0KJAXRC16pg" xmi:id="_5v1PE5LnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="CanvasLayer" xmi:id="_5v1PFJLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A45LnEea0KJAXRC16pg" xmi:id="_5v1PFZLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="ParallaxBackground" xmi:id="_5v1PFpLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v1PFJLnEea0KJAXRC16pg" xmi:id="_5v1PF5LnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="ResourcePreloader" xmi:id="_5v1PGJLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A45LnEea0KJAXRC16pg" xmi:id="_5v1PGZLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="AnimationTreePlayer" xmi:id="_5v1PGpLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A45LnEea0KJAXRC16pg" xmi:id="_5v1PG5LnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="Tween" xmi:id="_5v1PHJLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A45LnEea0KJAXRC16pg" xmi:id="_5v1PHZLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="SoundRoomParams" xmi:id="_5v1PHpLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A45LnEea0KJAXRC16pg" xmi:id="_5v1PH5LnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="SamplePlayer" xmi:id="_5v1PIJLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A45LnEea0KJAXRC16pg" xmi:id="_5v1PIZLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="EventPlayer" xmi:id="_5v1PIpLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A45LnEea0KJAXRC16pg" xmi:id="_5v1PI5LnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+        <packagedElement name="StreamPlayer" xmi:id="_5v1PJJLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <generalization general="_5v0A45LnEea0KJAXRC16pg" xmi:id="_5v1PJZLnEea0KJAXRC16pg" xmi:type="uml:Generalization"/>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement name="keywords" xmi:id="_5v1PJpLnEea0KJAXRC16pg" xmi:type="uml:Package">
+        <packagedElement name="signal" xmi:id="_5v1PJ5LnEea0KJAXRC16pg" xmi:type="uml:Class"/>
+        <packagedElement name="onready" xmi:id="_5v1PKJLnEea0KJAXRC16pg" xmi:type="uml:Class"/>
+        <packagedElement name="var" xmi:id="_5v1PKZLnEea0KJAXRC16pg" xmi:type="uml:Class"/>
+        <packagedElement isAbstract="true" name="export" xmi:id="_5v1PKpLnEea0KJAXRC16pg" xmi:type="uml:Class">
+          <ownedTemplateSignature parameter="_5v12EZLnEea0KJAXRC16pg" xmi:id="_5v12EJLnEea0KJAXRC16pg" xmi:type="uml:RedefinableTemplateSignature">
+            <ownedParameter constrainingClassifier="_5v0A9ZLnEea0KJAXRC16pg" parameteredElement="_5v12EpLnEea0KJAXRC16pg" xmi:id="_5v12EZLnEea0KJAXRC16pg" xmi:type="uml:ClassifierTemplateParameter">
+              <ownedParameteredElement name="types" owningTemplateParameter="_5v12EZLnEea0KJAXRC16pg" templateParameter="_5v12EZLnEea0KJAXRC16pg" xmi:id="_5v12EpLnEea0KJAXRC16pg" xmi:type="uml:Class"/>
+            </ownedParameter>
+          </ownedTemplateSignature>
+        </packagedElement>
+      </packagedElement>
+      <packagedElement name="BuiltIn" xmi:id="_5v12E5LnEea0KJAXRC16pg" xmi:type="uml:Package">
+        <packagedElement name="Vector2" xmi:id="_5v12FJLnEea0KJAXRC16pg" xmi:type="uml:Class"/>
+        <packagedElement name="int" xmi:id="_5v12FZLnEea0KJAXRC16pg" xmi:type="uml:Class"/>
+        <packagedElement name="float" xmi:id="_5v12FpLnEea0KJAXRC16pg" xmi:type="uml:Class"/>
+        <packagedElement name="String" xmi:id="_5v12F5LnEea0KJAXRC16pg" xmi:type="uml:Class"/>
+        <packagedElement name="bool" xmi:id="_5v12GJLnEea0KJAXRC16pg" xmi:type="uml:Class"/>
+        <packagedElement name="Array" xmi:id="_5v12GZLnEea0KJAXRC16pg" xmi:type="uml:Class"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement name="PrimitiveTypes" xmi:id="_5v12GpLnEea0KJAXRC16pg" xmi:type="uml:Package"/>
+  </uml:Model>
+</xmi:XMI>

@@ -4,4 +4,8 @@ Godot Engine Stuff
 
 ## GDProj
 
-Simple tool for start Godot Engine from project folder.
+Simple tool to start Godot Engine from project folder.
+
+## Astah Template
+
+Astah template with Godot Engine Classes and Nodes (with inheritance). *WIP*
