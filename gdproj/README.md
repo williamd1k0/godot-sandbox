@@ -6,7 +6,7 @@ Simple tool to start Godot Engine from project folder.
 
 This tool was made for temporary usage, since that this feature will be implemented in future.
 
-I can't link related issue on Godot repo because I lost it :disappointed_relieved:
+Related issue on Godot repo: https://github.com/godotengine/godot/issues/6915
 
 
 ## Usage
