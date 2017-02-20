@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://singletons/Dir2D.gd" type="Script" id=1]
 [ext_resource path="res://singletons/FilePath.gd" type="Script" id=2]
+[ext_resource path="res://singletons/ScoreServer.gd" type="Script" id=3]
 
 [node name="Singletons" type="Node"]
 
@@ -12,5 +13,9 @@ script/script = ExtResource( 1 )
 [node name="FilePath" type="Node" parent="."]
 
 script/script = ExtResource( 2 )
+
+[node name="ScoreServer" type="Node" parent="."]
+
+script/script = ExtResource( 3 )
 
 
