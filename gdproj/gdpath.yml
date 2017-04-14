@@ -1,0 +1,11 @@
+
+versions:
+  default: C:\custom_path\godot.exe
+  steam: C:\Program Files (x86)\Steam\steamapps\common\Godot Engine\godot.windows.opt.tools.32.exe
+
+# optional
+console: yes
+
+# optional
+callers:
+  - custom_terminal.exe

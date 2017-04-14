@@ -31,9 +31,7 @@ import subprocess
 import yaml
 
 
-GDFILE = '.gdpath'
-GDPATH = None
-GDVERSION = None
+GDFILE = 'gdpath.yml'
 
 
 class NotAGodotProjectException(Exception):
@@ -44,16 +42,12 @@ class GodotPathException(Exception):
 
 
 def is_gdproj(full_path):
-    dirs = os.path.split(full_path)
-    return '.gdproj' in dirs[-1]
-
+    return os.path.splitext(full_path)[-1] == '.gdproj'
 
 def get_proj_path(full_path):
-    dirs = os.path.split(full_path)
-    proj_path = list(dirs)
-    del proj_path[-1]
-    return '"%s"' % proj_path
-
+    path = os.path.dirname(os.path.abspath(full_path))
+    print('PROJ PATH:', path)
+    return path
 
 def get_gdversion(verfile):
     version = None
@@ -62,23 +56,42 @@ def get_gdversion(verfile):
             version = line
             break
     if version is None:
-        version = 'default'
+        return 'default'
     if version.strip() == '':
-        version = 'default'
-    return version
+        return 'default'
+    return version.strip()
 
-
-def get_gdexecutable(path, versions):
-    vers = None
-    with open(os.path.join(path, versions)) as gdfile:
-        vers = yaml.load(gdfile.read())
-
-    if vers is None:
+def has_executables(configs):
+    if not 'versions' in configs:
         raise GodotPathException('Godot Path was not found')
-    if not isinstance(vers, dict):
+    if not isinstance(configs, dict):
         raise GodotPathException('Godot Path was not found')
-    return vers
+    return True
 
+def get_configs(path):
+    with open(path, 'r', encoding='utf-8') as gdfile:
+        return yaml.load(gdfile.read())
+
+def parse_configs(configs):
+    if has_executables(configs):
+        gd_version = get_gdversion(sys.argv[1])
+        print('GODOT VERSION:', gd_version)
+        return (
+            configs['versions'][gd_version],
+            get_proj_path(sys.argv[1]),
+            configs.get('console', True),
+            configs.get('callers')
+        )
+
+def start_godot(exe, path, console=True, callers=None):
+    args = [exe, '-path', path, '-e']
+    if callers is not None:
+        args = callers + args
+    if console:
+        args = ['cmd', '/c', 'start'] + args
+
+    print('COMMANDLINE:', *args)
+    subprocess.call(args)
 
 if __name__ == '__main__':
     print('GDPROJ INIT')
@@ -87,30 +100,25 @@ if __name__ == '__main__':
         if not is_gdproj(sys.argv[1]):
             raise NotAGodotProjectException(sys.argv[1]+' is not a Godot Project')
 
-        GDVERSION = get_gdversion(sys.argv[1])
-        print('GODOT_VERSION:', GDVERSION)
-        
-        GDPATH = get_gdexecutable(os.path.dirname(sys.argv[0]), GDFILE)
-        print('PATH:', GDPATH[GDVERSION])
+        CONFIGS = get_configs(os.path.join(os.path.dirname(sys.argv[0]), GDFILE))
+        start_godot(*parse_configs(CONFIGS))
 
-        if len(sys.argv) > 0:
-            print(get_proj_path(sys.argv[1]))
-            subprocess.Popen([GDPATH[GDVERSION], '-path', get_proj_path(sys.argv[1]), '-e'])
-    
-    except NotAGodotProjectException as gder:
-        print(gder)
+    except NotAGodotProjectException as gderr:
+        print(gderr)
         print('NOT A GDPROJ!')
         input('ENTER TO EXIT')
-    
+
     except GodotPathException as gdp:
-        print(gdp)
         input('ENTER TO EXIT')
 
-    except IndexError as ie:
-        print(ie)
+    except IndexError:
         print("Don't execute this program!")
         input('ENTER TO EXIT')
-    
-    except KeyError as ke:
+
+    except KeyError:
         print('This version of Godot was not found!')
+        input('ENTER TO EXIT')
+
+    except FileNotFoundError as ferr:
+        print(ferr)
         input('ENTER TO EXIT')
