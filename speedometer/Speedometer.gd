@@ -9,9 +9,9 @@ var zero_rad = 0
 var max_rad = 0
 
 func _ready():
-	var needle_pos = needle.get_global_pos()
-	zero_rad = needle_pos.angle_to_point(get_node("Zero").get_global_pos())
-	max_rad = needle_pos.angle_to_point(get_node("Max").get_global_pos())
+	var needle_pos = needle.get_pos()
+	zero_rad = needle_pos.angle_to_point(get_node("Zero").get_pos())
+	max_rad = needle_pos.angle_to_point(get_node("Max").get_pos())
 	reset()
 
 func reset():
