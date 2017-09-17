@@ -1,0 +1,87 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://Speedometer.gd" type="Script" id=1]
+[ext_resource path="res://speedometer.webp" type="Texture" id=2]
+[ext_resource path="res://needle.webp" type="Texture" id=3]
+
+[node name="Speedometer" type="Node2D"]
+
+script/script = ExtResource( 1 )
+max_speed = 200
+unit = "Km/h"
+speed = 0
+
+[node name="Gauge" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+
+[node name="MaxSpeed" type="Label" parent="."]
+
+rect/rotation = -44.8343
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 23.0
+margin/top = 7.0
+margin/right = 100.0
+margin/bottom = 32.0
+text = "999Km/h"
+align = 2
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Speed" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -41.0
+margin/top = 89.0
+margin/right = 36.0
+margin/bottom = 114.0
+text = "0Km/h"
+align = 2
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Needle" type="Sprite" parent="."]
+
+transform/scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+offset = Vector2( -1, 0 )
+modulate = Color( 1, 0, 0, 1 )
+
+[node name="Zero" type="Position2D" parent="."]
+
+transform/pos = Vector2( -84.0986, 84.039 )
+
+[node name="Max" type="Position2D" parent="."]
+
+transform/pos = Vector2( 82.9014, 83.039 )
+
+[node name="TestCamera" type="Camera2D" parent="."]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit/left = -10000000
+limit/top = -10000000
+limit/right = 10000000
+limit/bottom = 10000000
+drag_margin/h_enabled = true
+drag_margin/v_enabled = true
+smoothing/enable = false
+smoothing/speed = 5.0
+drag_margin/left = 0.2
+drag_margin/top = 0.2
+drag_margin/right = 0.2
+drag_margin/bottom = 0.2
+
+
