@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://Grid.gd" type="Script" id=1]
+[ext_resource path="res://Polygon.tscn" type="PackedScene" id=2]
+
+[node name="Grid" type="Node2D"]
+
+script/script = ExtResource( 1 )
+size = Vector2( 8, 8 )
+offset = 81
+
+[node name="Polygon" parent="." instance=ExtResource( 2 )]
+
+polygon = Vector2Array( 123.729, 247.776, 163.18, 94.054, 510.075, 122.622, 510.075, 518.491 )
+
+[connection signal="polygon_changed" from="Polygon" to="." method="_on_Polygon_polygon_changed"]
+
+
