@@ -9,7 +9,7 @@
 script/script = ExtResource( 1 )
 max_speed = 200
 unit = "Km/h"
-speed = 234.832
+speed = 0
 
 [node name="Gauge" type="Sprite" parent="."]
 
