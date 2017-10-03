@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://sprite-palette/SpritePalette.tres" type="CanvasItemMaterial" id=1]
+[ext_resource path="res://sprite-palette/SpritePalette.gd" type="Script" id=2]
+
+[node name="SpritePalette" type="Sprite"]
+
+material/material = ExtResource( 1 )
+script/script = ExtResource( 2 )
+palette = -1
+color_step = 1
+force_update = false
+
+[node name="Palettes" type="ResourcePreloader" parent="."]
+
+resources = [ StringArray(  ), [  ] ]
+
+
