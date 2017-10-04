@@ -1,0 +1,88 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://komando/KonamiCode.gd" type="Script" id=1]
+[ext_resource path="res://komando/Komando.tscn" type="PackedScene" id=2]
+
+[node name="KonamiCode" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+script/script = ExtResource( 1 )
+
+[node name="Komando" parent="." instance=ExtResource( 2 )]
+
+actions = StringArray( "ui_up", "ui_up", "ui_down", "ui_down", "ui_left", "ui_right", "ui_left", "ui_right", "ui_cancel", "ui_accept" )
+
+[node name="Panel" type="Panel" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 592.0
+margin/bottom = 218.0
+
+[node name="Codes" type="HBoxContainer" parent="Panel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 110.0
+margin/right = 590.0
+margin/bottom = 150.0
+alignment = 1
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Feedback" type="Label" parent="Panel"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 50.0
+margin/right = 590.0
+margin/bottom = 100.0
+text = "Feedbacks"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Title" type="Label" parent="Panel"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 10.0
+margin/right = 590.0
+margin/bottom = 50.0
+text = "Konami Code"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[connection signal="done" from="Komando" to="." method="_on_Komando_done"]
+
+[connection signal="miss" from="Komando" to="." method="_on_Komando_miss"]
+
+[connection signal="step" from="Komando" to="." method="_on_Komando_step"]
+
+

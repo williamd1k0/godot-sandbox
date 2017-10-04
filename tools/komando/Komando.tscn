@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://komando/Komando.gd" type="Script" id=1]
+
+[node name="Komando" type="Node"]
+
+script/script = ExtResource( 1 )
+actions = StringArray( "ui_up", "ui_up", "ui_down", "ui_down" )
+threshold = 2
+
+[node name="Timer" type="Timer" parent="."]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+
