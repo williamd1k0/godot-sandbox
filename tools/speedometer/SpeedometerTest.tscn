@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://speedometer/SpeedometerTest.gd" type="Script" id=1]
+[ext_resource path="res://speedometer/Speedometer.tscn" type="PackedScene" id=2]
+
+[node name="SpeedometerTest" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+script/script = ExtResource( 1 )
+acceleration = 60
+
+[node name="Panel" type="Panel" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 350.0
+margin/bottom = 380.0
+
+[node name="Status" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 124.0
+margin/top = 338.0
+margin/right = 228.0
+margin/bottom = 374.0
+text = "Status"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Speedometer" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 175, 177 )
+max_speed = 300.0
+
+
