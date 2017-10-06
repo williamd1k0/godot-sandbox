@@ -1,0 +1,104 @@
+[gd_scene load_steps=7 format=1]
+
+[ext_resource path="res://file-drop/FileDropTest.gd" type="Script" id=1]
+[ext_resource path="res://file-drop/drag-drop.png" type="Texture" id=2]
+[ext_resource path="res://file-drop/FileDrop.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 84.7147, 47.8131 )
+
+[sub_resource type="Animation" id=2]
+
+resource/name = "drag"
+length = 1.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("DropArea:modulate")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.292923, 0.518525, 0.949219, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+
+resource/name = "files"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("DropArea:modulate")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.292923, 0.518525, 0.949219, 1 ), Color( 0.306549, 0.957031, 0.377696, 1 ) ]
+}
+
+[node name="FileDropTest" type="Node2D"]
+
+script/script = ExtResource( 1 )
+
+[node name="Panel" type="Panel" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 614.0
+margin/bottom = 308.0
+
+[node name="Files" type="ItemList" parent="Panel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 360.0
+margin/top = 20.0
+margin/right = 586.0
+margin/bottom = 282.0
+
+[node name="DropArea" type="Sprite" parent="."]
+
+transform/pos = Vector2( 151.177, 133.718 )
+texture = ExtResource( 2 )
+modulate = Color( 0.292923, 0.518525, 0.949219, 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="FileDrop" parent="DropArea" instance=ExtResource( 3 )]
+
+[node name="CollisionShape2D" parent="DropArea/FileDrop"]
+
+transform/pos = Vector2( 0, 10.0704 )
+transform/scale = Vector2( 1, 1.19819 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+playback/process_mode = 1
+playback/default_blend_time = 0.0
+root/root = NodePath("..")
+anims/drag = SubResource( 2 )
+anims/files = SubResource( 4 )
+playback/active = true
+playback/speed = 1.0
+blend_times = [  ]
+autoplay = "drag"
+
+[connection signal="files_dropped" from="DropArea/FileDrop" to="." method="_on_FileDrop_files_dropped"]
+
+
+[editable path="DropArea/FileDrop"]
