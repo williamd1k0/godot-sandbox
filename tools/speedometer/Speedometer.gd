@@ -2,7 +2,7 @@ tool
 extends Node2D
 
 export(float) var max_speed = 200
-export(String, 'Km/h', 'MPH') var unit = 'Km/h'
+export(String, 'Km/h', 'MPH', "RPM") var unit = 'Km/h'
 export(float) var speed = 0 setget set_speed
 onready var needle = get_node("Needle")
 onready var speed_label = get_node("Speed")
