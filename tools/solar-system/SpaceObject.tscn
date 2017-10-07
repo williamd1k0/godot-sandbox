@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://solar-system/SpaceObject.gd" type="Script" id=1]
+
+[node name="SpaceObject" type="PathFollow2D"]
+
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = false
+cubic_interp = true
+loop = true
+lookahead = 4.0
+script/script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+enabled = true
+orbit_time = 3
+rotation_time = 1
+rotation = true
+
+

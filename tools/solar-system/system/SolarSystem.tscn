@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://solar-system/system/Sun.tscn" type="PackedScene" id=1]
+[ext_resource path="res://solar-system/Orbit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://solar-system/system/Earth.tscn" type="PackedScene" id=3]
+
+[sub_resource type="GDScript" id=2]
+
+script/source = "extends Node2D
+
+export(Color) var space = Color(0, 0, 0)
+
+func _ready():
+	VisualServer.set_default_clear_color(space)
+"
+
+[sub_resource type="Curve2D" id=1]
+
+bake_interval = 5.0
+_data = {
+"points": Vector2Array( 0, 0, 752.503, -605.956, -1022.43, -634.807, 0, 0, 1032.15, 390.119, 904.571, -738.874, 0, 0, -606.486, 688.246, 1258.06, 589.246, 251.65, 435.808, -400.116, -677.539, -1431.87, 575.429, 0, 0, 0, 0, -1028.45, -628.786 )
+}
+
+[node name="SolarSystem" type="Node2D"]
+
+transform/scale = Vector2( 0.2, 0.2 )
+script/script = SubResource( 2 )
+space = Color( 0.0298309, 0.0378014, 0.0898438, 1 )
+
+[node name="Sun" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 2496.13, 1505.55 )
+enabled = true
+rotation_time = 8.0
+
+[node name="Orbit" parent="Sun" instance=ExtResource( 2 )]
+
+curve = SubResource( 1 )
+
+[node name="Earth" parent="Sun/Orbit" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -1022.43, -634.807 )
+orbit_time = 5.0
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+
+color = Color( 0.574219, 0.574219, 0.574219, 1 )
+
+

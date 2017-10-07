@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://solar-system/SpaceObject.tscn" type="PackedScene" id=1]
+[ext_resource path="res://solar-system/solar-system.png" type="Texture" id=2]
+[ext_resource path="res://solar-system/light.png" type="Texture" id=3]
+
+[node name="Sun" instance=ExtResource( 1 )]
+
+enabled = false
+
+[node name="Sprite" type="Sprite" parent="."]
+
+texture = ExtResource( 2 )
+region = true
+region_rect = Rect2( 63, 233, 457, 458 )
+
+[node name="Light2D" type="Light2D" parent="Sprite"]
+
+transform/scale = Vector2( 2, 2 )
+enabled = true
+editor_only = false
+texture = ExtResource( 3 )
+offset = Vector2( 0, 0 )
+scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 5.0
+mode = 0
+range/height = 0.0
+range/z_min = -1024
+range/z_max = 1024
+range/layer_min = 0
+range/layer_max = 0
+range/item_mask = 1
+shadow/enabled = false
+shadow/color = Color( 0, 0, 0, 0 )
+shadow/buffer_size = 2048
+shadow/esm_multiplier = 80.0
+shadow/item_mask = 1
+
+
