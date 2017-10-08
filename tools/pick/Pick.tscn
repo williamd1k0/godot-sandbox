@@ -1,0 +1,96 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://pick/Pick.gd" type="Script" id=1]
+[ext_resource path="res://pick/Mathlete-Bulky.otf" type="DynamicFontData" id=2]
+[ext_resource path="res://pick/Grid.tscn" type="PackedScene" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+
+font/size = 32
+font/use_mipmaps = true
+font/use_filter = true
+font/font = ExtResource( 2 )
+
+[node name="Pick" type="Node2D"]
+
+script/script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Panel" type="Panel" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 828.0
+margin/bottom = 600.0
+
+[node name="Label" type="Label" parent="Panel"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 570.0
+margin/top = 70.0
+margin/right = 830.0
+margin/bottom = 110.0
+custom_fonts/font = SubResource( 1 )
+text = "Pick's Theorem
+A = I + b/2 - 1"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Results" type="Label" parent="Panel"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 570.0
+margin/top = 220.0
+margin/right = 830.0
+margin/bottom = 268.0
+custom_fonts/font = SubResource( 1 )
+text = "interior points = {i}
+boundary points = {b}
+unit area = {u} units²
+pixel area = {a} pixels²"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Grid" parent="." instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 57.4153, 51.2637 )
+z/z = 0
+
+[node name="Polygon" parent="Grid"]
+
+polygon = Vector2Array( 126.339, 128.525, 125.339, 320.525, 384.969, 391.933, 320.339, 126.525 )
+
+[node name="ReferenceFrame" type="ReferenceFrame" parent="Grid"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 512.0
+margin/bottom = 512.0
+
+[connection signal="polygon_changed" from="Grid" to="." method="_on_Grid_polygon_changed"]
+
+
+[editable path="Grid"]

@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://pick/Grid.gd" type="Script" id=1]
+[ext_resource path="res://pick/Polygon.tscn" type="PackedScene" id=2]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "tool
+extends Node2D
+
+export(Vector2) var size
+export(int) var offset
+
+func _ready():
+	update()
+
+func _draw():
+	draw_grid()
+
+func draw_grid():
+	for y in range(1, size.y):
+		for x in range(1, size.x):
+			draw_circle(Vector2(x, y)*offset, 2.0, Color(1, 1, 1))
+"
+
+[node name="Grid" type="Node2D"]
+
+z/z = 1
+script/script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+size = Vector2( 8, 8 )
+offset = 64
+
+[node name="GridTool" type="Node2D" parent="."]
+
+script/script = SubResource( 1 )
+size = Vector2( 8, 8 )
+offset = 64
+
+[node name="Polygon" parent="." instance=ExtResource( 2 )]
+
+polygon = Vector2Array( 187.422, 181.89, 94.8325, 295.721, 210.676, 378.948, 391.606, 359.903, 388.738, 255.235, 258.289, 117.757 )
+color = Color( 1, 0, 0, 0.267686 )
+
+[connection signal="polygon_changed" from="Polygon" to="." method="_on_Polygon_polygon_changed"]
+
+
