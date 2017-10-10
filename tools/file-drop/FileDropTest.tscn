@@ -26,7 +26,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 0.292923, 0.518525, 0.949219, 1 ) ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 
 resource/name = "files"
 length = 1.0
@@ -92,7 +92,7 @@ playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
 anims/drag = SubResource( 2 )
-anims/files = SubResource( 4 )
+anims/files = SubResource( 3 )
 playback/active = true
 playback/speed = 1.0
 blend_times = [  ]

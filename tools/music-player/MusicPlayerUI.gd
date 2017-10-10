@@ -9,6 +9,7 @@ onready var time = get_node("Time")
 
 
 func _ready():
+	OS.set_window_size(get_node("Panel").get_size())
 	change_music(player.get_music_name())
 	player.connect("music_changed", self, 'change_music')
 	play.connect("pressed", self, 'on_play_pressed')

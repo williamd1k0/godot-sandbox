@@ -6,6 +6,7 @@ onready var feedback = get_node("Panel/Feedback")
 var codes = []
 
 func _ready():
+	OS.set_window_size(get_node("Panel").get_size())
 	feedback.set_text("Start")
 	for code in CODES:
 		var code_button = Button.new()

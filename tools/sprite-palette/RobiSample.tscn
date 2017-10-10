@@ -11,7 +11,7 @@
 
 texture = ExtResource( 2 )
 centered = false
-palette = 3
+palette = 0
 color_step = 10
 
 [node name="Palettes" parent="."]
