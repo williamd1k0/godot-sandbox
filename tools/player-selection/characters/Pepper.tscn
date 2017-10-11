@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://player-selection/Character.tscn" type="PackedScene" id=1]
+
+[node name="Pepper" instance=ExtResource( 1 )]
+
+centered = false
+region_rect = Rect2( 87, 27, 92, 100 )
+
+[node name="Focus" parent="."]
+
+transform/pos = Vector2( 46.4604, 95.619 )
+
+

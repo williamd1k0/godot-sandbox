@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://player-selection/MultiInputUI.gd" type="Script" id=1]
+
+[node name="MultiInputUI" type="Node"]
+
+script/script = ExtResource( 1 )
+player_count = 1
+action_names = StringArray( "left", "right" )
+action_template = "ui_{action}_{player_n}"
+
+

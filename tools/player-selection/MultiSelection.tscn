@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://player-selection/MultiSelection.gd" type="Script" id=1]
+[ext_resource path="res://player-selection/MultiInputUI.tscn" type="PackedScene" id=2]
+
+[node name="MultiSelection" type="Node2D"]
+
+script/script = ExtResource( 1 )
+players = 2
+player_colors = ColorArray( 0.127563, 0.15615, 0.859375, 1, 0.894531, 0.21315, 0.21315, 1 )
+
+[node name="Selectables" type="Node2D" parent="."]
+
+[node name="Cursors" type="Node2D" parent="."]
+
+[node name="MultiInputUI" parent="." instance=ExtResource( 2 )]
+
+player_count = 2
+action_names = StringArray( "left", "right", "select", "cancel" )
+
+[connection signal="pressed" from="MultiInputUI" to="." method="_on_MultiInputUI_pressed"]
+
+

@@ -1,0 +1,162 @@
+[gd_scene load_steps=16 format=1]
+
+[ext_resource path="res://player-selection/Pixelig Cursief.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://player-selection/MultiSelection.tscn" type="PackedScene" id=2]
+[ext_resource path="res://player-selection/characters/Pepper.tscn" type="PackedScene" id=3]
+[ext_resource path="res://player-selection/characters/Carrot.tscn" type="PackedScene" id=4]
+[ext_resource path="res://player-selection/characters/Saffron.tscn" type="PackedScene" id=5]
+[ext_resource path="res://player-selection/characters/Coriander.tscn" type="PackedScene" id=6]
+[ext_resource path="res://player-selection/characters/Shichimi.tscn" type="PackedScene" id=7]
+
+[sub_resource type="GDScript" id=7]
+
+script/source = "extends Node2D
+
+func _ready():
+	OS.set_window_size(get_node(\"Panel\").get_size())
+
+func _on_MultiSelection_select_all():
+	get_node(\"Panel/Info\").set_text(\"Get ready!\")
+"
+
+[sub_resource type="DynamicFont" id=1]
+
+font/size = 16
+font/use_mipmaps = false
+font/use_filter = false
+font/font = ExtResource( 1 )
+
+[sub_resource type="CanvasItemShader" id=8]
+
+_code = {
+"fragment": "uniform bool enabled = false;
+uniform color outline_color=vec4(0,0,0,1);
+float outline_width=1;
+
+if (enabled) {
+	vec4 col = tex(TEXTURE,UV);
+	vec2 ps = TEXTURE_PIXEL_SIZE;
+	float a;
+	float maxa=col.a;
+	float mina=col.a;
+	a=tex(TEXTURE,UV+vec2(0,-outline_width)*ps).a;
+	maxa=max(a,maxa); 
+	mina=min(a,mina);
+	a=tex(TEXTURE,UV+vec2(0,outline_width)*ps).a;
+	maxa=max(a,maxa); 
+	mina=min(a,mina);
+	a=tex(TEXTURE,UV+vec2(-outline_width,0)*ps).a;
+	maxa=max(a,maxa); 
+	mina=min(a,mina);
+	a=tex(TEXTURE,UV+vec2(outline_width,0)*ps).a;
+	maxa=max(a,maxa); 
+	mina=min(a,mina);
+	
+	COLOR=mix(col,outline_color,maxa-mina);
+}",
+"fragment_ofs": 0,
+"light": "",
+"light_ofs": 0,
+"vertex": "",
+"vertex_ofs": 0
+}
+
+[sub_resource type="CanvasItemMaterial" id=2]
+
+shader/shader = SubResource( 8 )
+shader/shading_mode = 0
+shader_param/enabled = true
+shader_param/outline_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=3]
+
+shader/shader = SubResource( 8 )
+shader/shading_mode = 0
+shader_param/enabled = true
+shader_param/outline_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=4]
+
+shader/shader = SubResource( 8 )
+shader/shading_mode = 0
+shader_param/enabled = true
+shader_param/outline_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=5]
+
+shader/shader = SubResource( 8 )
+shader/shading_mode = 0
+shader_param/enabled = true
+shader_param/outline_color = Color( 1, 1, 1, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=6]
+
+shader/shader = SubResource( 8 )
+shader/shading_mode = 0
+shader_param/enabled = true
+shader_param/outline_color = Color( 1, 1, 1, 1 )
+
+[node name="PepperCarrot" type="Node2D"]
+
+script/script = SubResource( 7 )
+
+[node name="Panel" type="Panel" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 320.0
+margin/bottom = 200.0
+
+[node name="Info" type="Label" parent="Panel"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 162.0
+margin/right = 320.0
+margin/bottom = 199.0
+custom_fonts/font = SubResource( 1 )
+text = "Select your character."
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="MultiSelection" parent="." instance=ExtResource( 2 )]
+
+[node name="Pepper" parent="MultiSelection/Selectables" instance=ExtResource( 3 )]
+
+material/material = SubResource( 2 )
+transform/pos = Vector2( 10, 30 )
+
+[node name="Carrot" parent="MultiSelection/Selectables" instance=ExtResource( 4 )]
+
+material/material = SubResource( 3 )
+transform/pos = Vector2( 93.0951, 113.018 )
+
+[node name="Saffron" parent="MultiSelection/Selectables" instance=ExtResource( 5 )]
+
+material/material = SubResource( 4 )
+transform/pos = Vector2( 146.138, 71.8991 )
+
+[node name="Coriander" parent="MultiSelection/Selectables" instance=ExtResource( 6 )]
+
+material/material = SubResource( 5 )
+transform/pos = Vector2( 212.588, 70.1538 )
+
+[node name="Shichimi" parent="MultiSelection/Selectables" instance=ExtResource( 7 )]
+
+material/material = SubResource( 6 )
+transform/pos = Vector2( 279.721, 87.1454 )
+
+[connection signal="select_all" from="MultiSelection" to="." method="_on_MultiSelection_select_all"]
+
+
+[editable path="MultiSelection"]
