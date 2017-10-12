@@ -1,0 +1,151 @@
+[gd_scene load_steps=19 format=1]
+
+[ext_resource path="res://joystick/Controller.gd" type="Script" id=1]
+[ext_resource path="res://joystick/x360/StickRight.png" type="Texture" id=2]
+[ext_resource path="res://joystick/x360/StickLeft.png" type="Texture" id=3]
+[ext_resource path="res://joystick/x360/ButtonA.png" type="Texture" id=4]
+[ext_resource path="res://joystick/x360/ButtonB.png" type="Texture" id=5]
+[ext_resource path="res://joystick/x360/ButtonX.png" type="Texture" id=6]
+[ext_resource path="res://joystick/x360/ButtonY.png" type="Texture" id=7]
+[ext_resource path="res://joystick/x360/BumperLeft.png" type="Texture" id=8]
+[ext_resource path="res://joystick/x360/BumperRight.png" type="Texture" id=9]
+[ext_resource path="res://joystick/x360/TriggerLeft.png" type="Texture" id=10]
+[ext_resource path="res://joystick/x360/TriggerRight.png" type="Texture" id=11]
+[ext_resource path="res://joystick/x360/Back.png" type="Texture" id=12]
+[ext_resource path="res://joystick/x360/Start.png" type="Texture" id=13]
+[ext_resource path="res://joystick/x360/Dpad.png" type="Texture" id=14]
+[ext_resource path="res://joystick/x360/DpadUp.png" type="Texture" id=15]
+[ext_resource path="res://joystick/x360/DpadDown.png" type="Texture" id=16]
+[ext_resource path="res://joystick/x360/DpadLeft.png" type="Texture" id=17]
+[ext_resource path="res://joystick/x360/DpadRight.png" type="Texture" id=18]
+
+[node name="Controller" type="Node2D"]
+
+script/script = ExtResource( 1 )
+__meta__ = {
+"__editor_plugin_screen__": "2D"
+}
+joy_num = 0
+
+[node name="axes" type="Node2D" parent="."]
+
+transform/pos = Vector2( 0, -91 )
+
+[node name="right" type="Sprite" parent="axes"]
+
+transform/pos = Vector2( 86.772, 270.192 )
+texture = ExtResource( 2 )
+offset = Vector2( 0, -57 )
+
+[node name="left" type="Sprite" parent="axes"]
+
+transform/pos = Vector2( -205, 170 )
+texture = ExtResource( 3 )
+offset = Vector2( 0, -57 )
+
+[node name="buttons" type="Node2D" parent="."]
+
+transform/pos = Vector2( 0, -91 )
+
+[node name="xyab" type="Node2D" parent="buttons"]
+
+transform/pos = Vector2( 205, 120 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="0" type="Sprite" parent="buttons/xyab"]
+
+transform/pos = Vector2( 0, 100 )
+texture = ExtResource( 4 )
+
+[node name="1" type="Sprite" parent="buttons/xyab"]
+
+transform/pos = Vector2( 100, 0 )
+texture = ExtResource( 5 )
+
+[node name="2" type="Sprite" parent="buttons/xyab"]
+
+transform/pos = Vector2( -100, 0 )
+texture = ExtResource( 6 )
+
+[node name="3" type="Sprite" parent="buttons/xyab"]
+
+transform/pos = Vector2( 0, -100 )
+texture = ExtResource( 7 )
+
+[node name="bumper" type="Node2D" parent="buttons"]
+
+transform/pos = Vector2( 0, 20 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="4" type="Sprite" parent="buttons/bumper"]
+
+transform/pos = Vector2( -160, 0 )
+texture = ExtResource( 8 )
+
+[node name="5" type="Sprite" parent="buttons/bumper"]
+
+transform/pos = Vector2( 160, 0 )
+texture = ExtResource( 9 )
+
+[node name="trigger" type="Node2D" parent="buttons"]
+
+transform/pos = Vector2( 0, 18 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="6base" type="Sprite" parent="buttons/trigger"]
+
+transform/pos = Vector2( -300, 0 )
+texture = ExtResource( 10 )
+
+[node name="6" type="Sprite" parent="buttons/trigger"]
+
+transform/pos = Vector2( -300, 0 )
+texture = ExtResource( 10 )
+
+[node name="7base" type="Sprite" parent="buttons/trigger"]
+
+transform/pos = Vector2( 300, 0 )
+texture = ExtResource( 11 )
+
+[node name="7" type="Sprite" parent="buttons/trigger"]
+
+transform/pos = Vector2( 300, 0 )
+texture = ExtResource( 11 )
+
+[node name="misc" type="Node2D" parent="buttons"]
+
+transform/pos = Vector2( 0, 94 )
+transform/scale = Vector2( 0.5, 0.5 )
+
+[node name="10" type="Sprite" parent="buttons/misc"]
+
+transform/pos = Vector2( -100, 0 )
+texture = ExtResource( 12 )
+
+[node name="11" type="Sprite" parent="buttons/misc"]
+
+transform/pos = Vector2( 100, 0 )
+texture = ExtResource( 13 )
+
+[node name="dpad" type="Sprite" parent="buttons"]
+
+transform/pos = Vector2( -88.0942, 213.906 )
+texture = ExtResource( 14 )
+
+[node name="12" type="Sprite" parent="buttons/dpad"]
+
+texture = ExtResource( 15 )
+
+[node name="13" type="Sprite" parent="buttons/dpad"]
+
+texture = ExtResource( 16 )
+
+[node name="14" type="Sprite" parent="buttons/dpad"]
+
+texture = ExtResource( 17 )
+
+[node name="15" type="Sprite" parent="buttons/dpad"]
+
+texture = ExtResource( 18 )
+
+

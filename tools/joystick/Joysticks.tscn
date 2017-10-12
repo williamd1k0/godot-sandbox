@@ -1,0 +1,88 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://joystick/Controller.tscn" type="PackedScene" id=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Node2D
+
+func update_controller(n, c):
+	if c:
+		get_node(\"Panel/Label%s\" % n).set_text('Controller %s (connected)' % n)
+	else:
+		get_node(\"Panel/Label%s\" % n).set_text('Controller %s (disconnected)' % n)
+
+func _on_Controller1_connection_changed( connected ):
+	update_controller(1, connected)
+
+func _on_Controller2_connection_changed( connected ):
+	update_controller(2, connected)
+
+"
+
+[node name="Joysticks" type="Node2D"]
+
+script/script = SubResource( 1 )
+__meta__ = {
+"__editor_plugin_screen__": "Script"
+}
+
+[node name="Panel" type="Panel" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 1024.0
+margin/bottom = 600.0
+
+[node name="Label1" type="Label" parent="Panel"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 218.0
+margin/top = 0.0
+margin/right = 362.0
+margin/bottom = 74.0
+text = "Controller 1"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Label2" type="Label" parent="Panel"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 655.0
+margin/top = 222.0
+margin/right = 799.0
+margin/bottom = 296.0
+text = "Controller 2"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Controller1" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 290.056, 150.897 )
+
+[node name="Controller2" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 722.633, 391.403 )
+joy_num = 1
+
+[connection signal="connection_changed" from="Controller1" to="." method="_on_Controller1_connection_changed"]
+
+[connection signal="connection_changed" from="Controller2" to="." method="_on_Controller2_connection_changed"]
+
+
