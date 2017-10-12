@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=1]
+
+[ext_resource path="res://level-maker/textures/tiles.png" type="Texture" id=1]
+[ext_resource path="res://level-maker/ItemButton.gd" type="Script" id=2]
+
+[sub_resource type="CanvasItemShader" id=1]
+
+_code = {
+"fragment": "uniform bool focus = false;
+
+if (focus){
+	COLOR.rgb*=2;
+}
+",
+"fragment_ofs": 0,
+"light": "",
+"light_ofs": 0,
+"vertex": "",
+"vertex_ofs": 0
+}
+
+[sub_resource type="CanvasItemMaterial" id=2]
+
+shader/shader = SubResource( 1 )
+shader/shading_mode = 0
+shader_param/focus = false
+
+[sub_resource type="AtlasTexture" id=3]
+
+atlas = ExtResource( 1 )
+region = Rect2( 80, 32, 16, 16 )
+margin = Rect2( 0, 0, 0, 0 )
+
+[node name="Item" type="TextureButton"]
+
+material/material = SubResource( 2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 16.0
+margin/bottom = 16.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+textures/normal = SubResource( 3 )
+params/resize_mode = 0
+params/stretch_mode = 0
+script/script = ExtResource( 2 )
+
+[connection signal="focus_enter" from="." to="." method="_on_focus_enter"]
+
+[connection signal="focus_exit" from="." to="." method="_on_focus_exit"]
+
+[connection signal="mouse_enter" from="." to="." method="_on_mouse_enter"]
+
+[connection signal="mouse_exit" from="." to="." method="_on_mouse_exit"]
+
+

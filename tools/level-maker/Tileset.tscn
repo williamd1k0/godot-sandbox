@@ -1,0 +1,79 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://level-maker/textures/tiles.png" type="Texture" id=1]
+
+[node name="Tileset" type="Node2D"]
+
+[node name="Block1" type="Sprite" parent="."]
+
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 80, 32, 16, 16 )
+
+[node name="Block2" type="Sprite" parent="."]
+
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 64, 32, 16, 16 )
+
+[node name="Block3" type="Sprite" parent="."]
+
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 80, 16, 16, 16 )
+
+[node name="Block4" type="Sprite" parent="."]
+
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 96, 0, 32, 16 )
+
+[node name="Block5" type="Sprite" parent="."]
+
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 96, 16, 32, 32 )
+
+[node name="Block6" type="Sprite" parent="."]
+
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 112, 48, 16, 32 )
+
+[node name="Lava1" type="Sprite" parent="."]
+
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 64, 0, 16, 16 )
+
+[node name="Lava2" type="Sprite" parent="."]
+
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 80, 0, 16, 16 )
+
+[node name="Lava3" type="Sprite" parent="."]
+
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 64, 16, 16, 16 )
+
+[node name="Bg1" type="Sprite" parent="."]
+
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 16, 16, 16, 16 )
+
+[node name="Bg2" type="Sprite" parent="."]
+
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 48, 16, 16, 16 )
+
+[node name="Bg3" type="Sprite" parent="."]
+
+texture = ExtResource( 1 )
+region = true
+region_rect = Rect2( 32, 16, 16, 16 )
+
+
