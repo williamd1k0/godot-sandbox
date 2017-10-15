@@ -1,0 +1,43 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://addons/anime-save/ExportDialog.gd" type="Script" id=1]
+
+[node name="FileDialog" type="FileDialog"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 299.0
+margin/top = 146.0
+margin/right = 710.0
+margin/bottom = 494.0
+popup/exclusive = true
+window/title = "Open a Directory"
+dialog/text = "Select a folder to export all animations."
+dialog/hide_on_ok = false
+mode = 2
+access = 0
+filters = StringArray(  )
+show_hidden_files = false
+script/script = ExtResource( 1 )
+
+[node name="Done" type="AcceptDialog" parent="."]
+
+visibility/visible = false
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 55.0
+margin/bottom = 58.0
+popup/exclusive = false
+window/title = "Done!"
+dialog/text = "All animations have been exported successfully."
+dialog/hide_on_ok = true
+
+[connection signal="confirmed" from="." to="." method="_on_FileDialog_confirmed"]
+
+

@@ -1,0 +1,19 @@
+[gd_resource type="Animation" format=1]
+
+[resource]
+
+resource/name = "files"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("DropArea:modulate")
+tracks/0/interp = 1
+tracks/0/imported = false
+tracks/0/keys = {
+"times": FloatArray( 0, 0.5 ),
+"transitions": FloatArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.292923, 0.518525, 0.949219, 1 ), Color( 0.306549, 0.957031, 0.377696, 1 ) ]
+}
+
