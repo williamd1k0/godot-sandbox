@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://poly-umi/PolyUmi.gd" type="Script" id=1]
+
+[node name="PolyUmi" type="Node2D"]
+
+transform/pos = Vector2( 36.119, 55.8362 )
+script/script = ExtResource( 1 )
+hsize = 14
+vsize = 10
+pixel_size = Vector2( 60, 25 )
+randrange = Vector2( 0.2, 0.2 )
+vrandom = true
+hrandom = true
+timer = 0.1
+enabled = true
+
+
